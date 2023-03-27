@@ -3,12 +3,12 @@
 
 This Capstone provides the opportunity to demonstrate all the skills learned thru the Data Engineering  Professional Certificate program.  
 
-As part of the Capstone project, you will assume the role of an Associate Data Engineer who has recently joined an e-commerce organization. You will be presented with a business challenge that requires building a data platform for a retailer data analytics. 
-
 <p style="text-align:center">
     <img src="https://github.com/erwinpasia/IBM-Data-Engineering-Capstone-Project/blob/main/images/Data%20Engineering%20Capstone%20Project%20-%20Time%20To%20Demonstrate.png" alt="IBM Data Engineering Professional Certificate"  />
     </a>
 </p>
+
+As part of the Capstone project, you will assume the role of an Associate Data Engineer who has recently joined an e-commerce organization. You will be presented with a business challenge that requires building a data platform for a retailer data analytics. 
 
 <p style="text-align:center">
     <a href="https://www.coursera.org/learn/data-enginering-capstone-project?specialization=ibm-data-engineer" target="_blank">
