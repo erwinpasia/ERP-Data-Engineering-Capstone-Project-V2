@@ -1,4 +1,4 @@
-# IBM-Data-Engineering-Capstone-Project - COMPLETED!
+# IBM Data Engineering Capstone Project - COMPLETED!
 
 This Capstone provides the "opportunity to demonstrate" all the skills learned from course-1 up to course-12 of the "Data Engineering Professional Certificate program".  
 
