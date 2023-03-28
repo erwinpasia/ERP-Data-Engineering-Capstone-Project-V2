@@ -1,0 +1,103 @@
+=========================================================
+Creating a MySQL Database, Table, rows and columns:
+=========================================================
+
+CREATE DATABASE sales;
+
+create table sales_data ( product_id int, customer_id int, price float(10,3), quantity int, timestamp timestamp ); 
+
+create table sales_data ( product_id int, customer_id int, price float(10,5), quantity int, timestamp timestamp ); 
+
+=========================================================
+Importing a MongoDB JSON file
+=========================================================
+
+mongoimport -u root -p NjE2Ny1lcndpbnBh --authenticationDatabase admin --db catalog --collection electronics --file catalog.json
+
+mongoexport -u root -p NjE2Ny1lcndpbnBh --authenticationDatabase admin --db catalog --collection electronics --out electronics.csv --type=csv --fields _id,type,model
+
+=========================================================
+
+theia@theiadocker-erwinpasia:/home/project$ mongo -u root -p NjE2Ny1lcndpbnBh --authenticationDatabase admin local
+MongoDB shell version v3.6.3
+connecting to: mongodb://127.0.0.1:27017/local
+MongoDB server version: 3.6.3
+Server has startup warnings: 
+2023-03-16T14:07:54.723+0000 I STORAGE  [initandlisten] 
+2023-03-16T14:07:54.723+0000 I STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2023-03-16T14:07:54.723+0000 I STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+
+> show dbs
+admin    0.000GB
+catalog  0.000GB
+config   0.000GB
+local    0.000GB
+> 
+> 
+> 
+> 
+> 
+
+> 
+> use catalog
+
+switched to db catalog
+
+> show collections
+electronics
+> 
+> 
+> 
+> 
+> 
+
+> 
+> db.electronics.createIndex({"type":1})
+{
+        "createdCollectionAutomatically" : false,
+        "numIndexesBefore" : 1,
+        "numIndexesAfter" : 2,
+        "ok" : 1
+}
+> 
+> 
+> 
+
+> 
+> db.electronics.count({"type":"laptop"})
+389
+> 
+> 
+> 
+
+> 
+> 
+> 
+> db.electronics.count({"type":"smart phone"},{"screen size":6})
+24
+> 
+> 
+> 
+>
+> 
+> 
+> 
+> db.electronics.aggregate([{"$match": {"type": "smart phone"}}, {"$group": {"_id": "$type", "average": {$avg: "$screen_size"}}}])
+{ "_id" : "smart phone", "average" : null }
+> 
+> db.electronics.aggregate([{"$match": {"type": "smart phone"}}, {"$group": {"_id": "$type", "average": {$avg: "$screen size"}}}])
+{ "_id" : "smart phone", "average" : 6 }
+> 
+> 
+> db.electronics.aggregate([{"$match": {"type": "smart phone"}}, {"$group": {"_id": "$type", "average": {"$avg": "$screen size"}}}])
+{ "_id" : "smart phone", "average" : 6 }
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+
