@@ -36,3 +36,11 @@ In this Capstone project, you will: "Design and build" a data platform that uses
 5. In Module 5, you will extract data from OLTP, NoSQL, and MongoDB databases into CSV format. You will then transform the OLTP data to suit the data warehouse schema and then load the transformed data into the data warehouse. Finally, you will verify that the data is loaded properly. 
 
 6. In the final Module 6, you will use your skills in Big Data Analytics to create a Spark connection to the data warehouse, and then deploy a machine learning model on SparkML for making sales projections. 
+
+# Data Engineering Capstone Project - Certificate of Completion
+
+<p style="text-align:center">
+    <a href="https://www.coursera.org/learn/data-enginering-capstone-project?specialization=ibm-data-engineer" target="_blank">
+    <img src="https://github.com/erwinpasia/IBM-Data-Engineering-Capstone-Project/blob/main/images/Data%20Engineering%20Capstone%20Project%20-%20Tasks%20To%20Perform.png" alt="IBM Data Engineering Professional Certificate"  />
+    </a>
+</p>
