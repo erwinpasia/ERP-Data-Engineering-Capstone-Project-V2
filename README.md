@@ -12,7 +12,7 @@ As part of the Capstone project, you will assume the role of an Associate Data E
 
 <p style="text-align:center">
     <a href="https://www.coursera.org/learn/data-enginering-capstone-project?specialization=ibm-data-engineer" target="_blank">
-    <img src="https://github.com/erwinpasia/IBM-Data-Engineering-Capstone-Project/blob/main/images/Data%20Engineering%20Capstone%20Project%20-%20Data%20Platform%20Architecture_1.png" alt="IBM Data Engineering Professional Certificate"  />
+    <img src="https://github.com/erwinpasia/IBM-Data-Engineering-Capstone-Project/blob/main/images/Data%20Engineering%20Capstone%20Project%20-%20Tasks%20To%20Perform.png" alt="IBM Data Engineering Professional Certificate"  />
     </a>
 </p>
 
@@ -20,7 +20,7 @@ In this Capstone project, you will: "Design and build" a data platform that uses
 
 <p style="text-align:center">
     <a href="https://www.coursera.org/learn/data-enginering-capstone-project?specialization=ibm-data-engineer" target="_blank">
-    <img src="https://github.com/erwinpasia/IBM-Data-Engineering-Capstone-Project/blob/main/images/Data%20Engineering%20Capstone%20Project%20-%20Tasks%20To%20Perform.png" alt="IBM Data Engineering Professional Certificate"  />
+    <img src="https://github.com/erwinpasia/IBM-Data-Engineering-Capstone-Project/blob/main/images/Data%20Engineering%20Capstone%20Project%20-%20Data%20Platform%20Architecture_1.png" alt="IBM Data Engineering Professional Certificate"  />
     </a>
 </p>
 
