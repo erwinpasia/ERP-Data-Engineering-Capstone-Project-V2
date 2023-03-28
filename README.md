@@ -40,7 +40,7 @@ In this Capstone project, you will: "Design and build" a data platform that uses
 # Data Engineering Capstone Project - Certificate of Completion
 
 <p style="text-align:center">
-    <a href="https://www.coursera.org/learn/data-enginering-capstone-project?specialization=ibm-data-engineer" target="_blank">
+    <a href="https://www.coursera.org/account/accomplishments/verify/LAWSR5DZFP5D" target="_blank">
     <img src="https://github.com/erwinpasia/IBM-Data-Engineering-Capstone-Project/blob/main/images/Data%20Engineering%20Capstone%20Project%20-%20Tasks%20To%20Perform.png" alt="IBM Data Engineering Professional Certificate"  />
     </a>
 </p>
