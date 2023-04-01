@@ -24,21 +24,19 @@ In this Capstone project, you will: "Design and build" a data platform that uses
     </a>
 </p>
 
-1. In <a href="https://github.com/erwinpasia/IBM-Data-Engineering-Capstone-Project/tree/main/Capstone%20Project%20Files/1_MySQL_OLTP_DB_Transactional_Data">Module_1</a>, you will design the OLTP database for an E-Commerce website, populate the OLTP Database with the data provided and automate the export of the daily incremental data into the data warehouse. 
+1. In [Module_1](Capstone%20Project%20Files/1_MySQL_OLTP_DB_Transactional_Data), you will design the OLTP database for an E-Commerce website, populate the OLTP Database with the data provided and automate the export of the daily incremental data into the data warehouse. 
 
-TEST. In [Module_TEST](Capstone%20Project%20Files/1_MySQL_OLTP_DB_Transactional_Data), you will design the OLTP database for an E-Commerce website, populate the OLTP Database with the data provided and automate the export of the daily incremental data into the data warehouse. 
+2. In [Module_2](Capstone%20Project%20Files/2_MongoDB_NoSQL_Database_Catalog_Data), you will set up a NoSQL database to store the catalog data for an E-Commerce website, load the E-Commerce catalog data into the NoSQL database, and query the E-Commerce catalog data in the NoSQL database. 
 
-2. In <a href="https://github.com/erwinpasia/IBM-Data-Engineering-Capstone-Project/tree/main/Capstone%20Project%20Files/2_MongoDB_NoSQL_Database_Catalog_Data">Module_2</a>, you will set up a NoSQL database to store the catalog data for an E-Commerce website, load the E-Commerce catalog data into the NoSQL database, and query the E-Commerce catalog data in the NoSQL database. 
+3. In [Module_3-a](Capstone%20Project%20Files/3-a _PostgreSQL_Staging_Data_Warehouse), you will design the schema for a data warehouse based on the schema of the OLTP and NoSQL databases. While on [Module_3-b](Capstone%20Project%20Files/3-b_Db2_Production_Data_Warehouse), you’ll then create the schema and load the data into fact and dimension tables, automate the daily incremental data insertion into the data warehouse, and create Cubes and Rollups to make the reporting easier. 
 
-3. In <a href="https://github.com/erwinpasia/IBM-Data-Engineering-Capstone-Project/tree/main/Capstone%20Project%20Files/3-a _PostgreSQL_Staging_Data_Warehouse">Module_3-a</a>, you will design the schema for a data warehouse based on the schema of the OLTP and NoSQL databases. While on <a href="https://github.com/erwinpasia/IBM-Data-Engineering-Capstone-Project/tree/main/Capstone%20Project%20Files/3-b_Db2_Production_Data_Warehouse">Module_3-b</a>, you’ll then create the schema and load the data into fact and dimension tables, automate the daily incremental data insertion into the data warehouse, and create Cubes and Rollups to make the reporting easier. 
+4. In [Module_4](Capstone%20Project%20Files/4_Cognos_Analytics_Business_Intelligence), you will create a Cognos (Business Intelligence Analytics) data source that points to a data warehouse table, create a bar chart of Quarterly sales of cell phones, create a pie chart of sales of electronic goods by category, and create a line chart of total sales per month for the year 2020. 
 
-4. In <a href="https://github.com/erwinpasia/IBM-Data-Engineering-Capstone-Project/tree/main/Capstone%20Project%20Files/4_Cognos_Analytics_Business_Intelligence">Module_4</a>, you will create a Cognos (Business Intelligence Analytics) data source that points to a data warehouse table, create a bar chart of Quarterly sales of cell phones, create a pie chart of sales of electronic goods by category, and create a line chart of total sales per month for the year 2020. 
+5. In [Module_5](Capstone%20Project%20Files/5_ETL_and_Data_Pipelines), you will extract data from OLTP, NoSQL, and MongoDB databases into CSV format. You will then transform the OLTP data to suit the data warehouse schema and then load the transformed data into the data warehouse. Finally, you will verify that the data is loaded properly. 
 
-5. In <a href="https://github.com/erwinpasia/IBM-Data-Engineering-Capstone-Project/tree/main/Capstone%20Project%20Files/5_ETL_and_Data_Pipelines">Module_5</a>, you will extract data from OLTP, NoSQL, and MongoDB databases into CSV format. You will then transform the OLTP data to suit the data warehouse schema and then load the transformed data into the data warehouse. Finally, you will verify that the data is loaded properly. 
+6. In [Module_6](Capstone%20Project%20Files/6_Spark_BigData_Cluster), you will use your skills in Big Data Analytics to create a Spark connection to the data warehouse, and then deploy a machine learning model on SparkML for making sales projections. 
 
-6. In the final <a href="https://github.com/erwinpasia/IBM-Data-Engineering-Capstone-Project/tree/main/Capstone%20Project%20Files/6_Spark_BigData_Cluster">Module_6</a>, you will use your skills in Big Data Analytics to create a Spark connection to the data warehouse, and then deploy a machine learning model on SparkML for making sales projections. 
-
-## Data Engineering Capstone Project - Certificate of Completion
+## [Data Engineering Capstone Project - Certificate of Completion](https://www.coursera.org/account/accomplishments/verify/LAWSR5DZFP5D)
 
 <p style="text-align:center">
     <a href="https://www.coursera.org/account/accomplishments/verify/LAWSR5DZFP5D" target="_blank">
