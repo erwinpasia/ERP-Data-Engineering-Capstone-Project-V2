@@ -26,7 +26,7 @@ In this Capstone project, you will: "Design and build" a data platform that uses
 
 1. In <a href="https://github.com/erwinpasia/IBM-Data-Engineering-Capstone-Project/tree/main/Capstone%20Project%20Files/1_MySQL_OLTP_DB_Transactional_Data">Module_1</a>, you will design the OLTP database for an E-Commerce website, populate the OLTP Database with the data provided and automate the export of the daily incremental data into the data warehouse. 
 
-TEST. In Module_TEST(/Capstone%20Project%20Files/1_MySQL_OLTP_DB_Transactional_Data), you will design the OLTP database for an E-Commerce website, populate the OLTP Database with the data provided and automate the export of the daily incremental data into the data warehouse. 
+TEST. In [Module_TEST](Capstone%20Project%20Files/1_MySQL_OLTP_DB_Transactional_Data), you will design the OLTP database for an E-Commerce website, populate the OLTP Database with the data provided and automate the export of the daily incremental data into the data warehouse. 
 
 2. In <a href="https://github.com/erwinpasia/IBM-Data-Engineering-Capstone-Project/tree/main/Capstone%20Project%20Files/2_MongoDB_NoSQL_Database_Catalog_Data">Module_2</a>, you will set up a NoSQL database to store the catalog data for an E-Commerce website, load the E-Commerce catalog data into the NoSQL database, and query the E-Commerce catalog data in the NoSQL database. 
 
