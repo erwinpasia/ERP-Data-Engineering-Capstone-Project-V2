@@ -28,7 +28,7 @@ In this Capstone project, you will: "Design and build" a data platform that uses
 
 2. In [Module_2](Capstone%20Project%20Files/2_MongoDB_NoSQL_Database_Catalog_Data), you will set up a NoSQL database to store the catalog data for an E-Commerce website, load the E-Commerce catalog data into the NoSQL database, and query the E-Commerce catalog data in the NoSQL database. 
 
-3. In [Module_3-a](Capstone%20Project%20Files/3-a_PostgreSQL_Staging_Data_Warehouse), you will design the schema for a data warehouse based on the schema of the OLTP and NoSQL databases. While on [Module_3-b](Capstone%20Project%20Files/3-b_Db2_Production_Data_Warehouse), you’ll then create the schema and load the data into fact and dimension tables, automate the daily incremental data insertion into the data warehouse, and create Cubes and Rollups to make the reporting easier. 
+3. In [Module_3-a](Capstone Project Files/3-a _PostgreSQL_Staging_Data_Warehouse), you will design the schema for a data warehouse based on the schema of the OLTP and NoSQL databases. While on [Module_3-b](Capstone%20Project%20Files/3-b_Db2_Production_Data_Warehouse), you’ll then create the schema and load the data into fact and dimension tables, automate the daily incremental data insertion into the data warehouse, and create Cubes and Rollups to make the reporting easier. 
 
 4. In [Module_4](Capstone%20Project%20Files/4_Cognos_Analytics_Business_Intelligence), you will create a Cognos (Business Intelligence Analytics) data source that points to a data warehouse table, create a bar chart of Quarterly sales of cell phones, create a pie chart of sales of electronic goods by category, and create a line chart of total sales per month for the year 2020. 
 
