@@ -1,4 +1,4 @@
-# [IBM Data Engineering Capstone Project](https://www.coursera.org/learn/data-enginering-capstone-project?specialization=ibm-data-engineer) - COMPLETED!
+# [IBM Data Engineering Professional Certificate's Capstone Project](https://www.coursera.org/learn/data-enginering-capstone-project?specialization=ibm-data-engineer) - COMPLETED!
 
 This Capstone provides the "opportunity to demonstrate" all the skills learned from course_1 up to course_12 of the "Data Engineering Professional Certificate" program.  
 
