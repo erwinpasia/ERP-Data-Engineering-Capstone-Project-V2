@@ -36,7 +36,7 @@ In this Capstone project, you will: "Design and build" a data platform that uses
 
 6. In [Module_6](Capstone%20Project%20Files/6_Spark_BigData_Cluster), you will use your skills in Big Data Analytics to create a Spark connection to the data warehouse, and then deploy a machine learning model on SparkML for making sales projections. 
 
-## [Data Engineering Capstone Project - Certificate of Completion](https://www.coursera.org/account/accomplishments/verify/LAWSR5DZFP5D)
+## [Certificate of Competency:](https://www.coursera.org/account/accomplishments/verify/LAWSR5DZFP5D)
 
 <p style="text-align:center">
     <a href="https://www.coursera.org/account/accomplishments/verify/LAWSR5DZFP5D" target="_blank">
