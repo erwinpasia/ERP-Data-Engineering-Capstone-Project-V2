@@ -97,9 +97,9 @@ In this Capstone project, you will: "Design and build" a data platform that uses
     </a>
 </p>
 
-# Modern Data Platform Architecture
+# Modernize Version of the Data Platform Architecture
 
-This project provides a cloud-native, modern data platform architecture for an e-commerce business, shifting from traditional on-premise and self-managed systems to fully managed, scalable, and serverless cloud services. This design leverages Snowflake, Databricks, and real-time processing technologies to align with current data engineering best practices.
+This possible alternative project provides a cloud-native, modern data platform architecture for an e-commerce business, shifting from traditional on-premise and self-managed systems to fully managed, scalable, and serverless cloud services. This design leverages Snowflake, Databricks, and real-time processing technologies to align with current data engineering best practices.
 
 ## Project Overview
 
@@ -117,7 +117,8 @@ In this capstone project, you will:
 
 ```plaintext
                       +-------------------------+
-                      |   Customers (Internet)  |
+                      |   Customers from the    |
+                      |       (Internet)        |
                       +------------+------------+
                                    |
                                    |
@@ -157,7 +158,7 @@ In this capstone project, you will:
 
 # Modern Data Architecture
 
-This README provides an overview of a modern data architecture designed for scalability, real-time data processing, and efficient data storage and retrieval. This architecture integrates various cloud services to support data engineering, data analytics, and machine learning workflows.
+This version provides an overview of a modern data architecture designed for scalability, real-time data processing, and efficient data storage and retrieval. This architecture integrates various cloud services to support data engineering, data analytics, and machine learning workflows.
 
 ## Components
 
