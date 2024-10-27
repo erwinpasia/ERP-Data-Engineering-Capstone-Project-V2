@@ -1,6 +1,59 @@
 # [IBM Data Engineering Professional Certificate's Capstone Project](https://www.coursera.org/learn/data-enginering-capstone-project?specialization=ibm-data-engineer) - COMPLETED!
 
-This Capstone provides the "opportunity to demonstrate" all the skills learned from course_1 up to course_12 of the "Data Engineering Professional Certificate" program.  
+The IBM Data Engineering Professional Certificate's Capstone Project is designed to apply and integrate the skills learned throughout the program. This project focuses on building a comprehensive data platform architecture, enabling students to demonstrate their expertise in modern data engineering practices.
+
+## **Project Overview**
+
+### **Objective**
+
+The capstone project aims to create a data platform that efficiently handles data ingestion, storage, processing, and analytics. Students are tasked with designing a scalable architecture that supports business intelligence and decision-making processes.
+
+### **Data Engineering Methodology**
+
+The project involves several critical components typical in data engineering workflows:
+
+- **Data Ingestion:**
+    - Collect data from various sources such as web servers and customer interactions.
+    - Use Apache Airflow for orchestrating complex data pipelines.
+
+- **Data Storage:**
+    - Utilize MySQL for OLTP (Online Transaction Processing) databases to handle transactional data.
+    - Implement MongoDB for NoSQL database needs, storing catalog data.
+    - Use PostgreSQL for staging data warehouses, preparing data for further processing.
+
+- **Data Processing:**
+    - Leverage Apache Spark for big data analytics, enabling large-scale data processing and transformation.
+    - Use Hadoop as a big data platform for distributed storage and processing.
+
+- **Data Warehousing:**
+    - Employ IBM Db2 on Cloud as the production data warehouse, ensuring efficient storage and retrieval of processed data.
+
+- **Business Intelligence:**
+    - Integrate IBM Cognos Analytics to provide business intelligence dashboards and reporting capabilities.
+
+### **Tools and Technologies**
+
+- **Databases:**
+    - MySQL for transactional data.
+    - MongoDB for NoSQL storage.
+    - PostgreSQL for staging.
+    - IBM Db2 on Cloud for production warehousing.
+
+- **Big Data Platforms:**
+    - Hadoop for distributed processing.
+    - Apache Spark for analytics.
+
+- **Data Pipeline Orchestration:**
+    - Apache Airflow for managing workflows.
+
+- **Business Intelligence:**
+    - IBM Cognos Analytics for insights and reporting.
+
+### **Outcome**
+
+By completing this capstone project, students gain hands-on experience in designing and implementing a robust data platform architecture. They learn how to manage complex data workflows efficiently, ensuring high-quality, accessible data ready for analysis. This project enhances their ability to solve real-world data engineering challenges, preparing them for roles such as Data Engineer or Database Architect.
+
+The capstone provides a significant addition to their professional portfolio, showcasing their ability to build scalable and efficient data solutions. It emphasizes critical thinking in architecture design and effective communication of technical results to stakeholders, equipping students with the skills needed to excel in advanced positions within the field of data engineering.  
 
 <p style="text-align:center">
     <a href="https://www.coursera.org/learn/data-enginering-capstone-project?specialization=ibm-data-engineer" target="_blank">
