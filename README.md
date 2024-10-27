@@ -96,3 +96,82 @@ In this Capstone project, you will: "Design and build" a data platform that uses
     <img src="https://github.com/erwinpasia/IBM-Data-Engineering-Capstone-Project/blob/main/images/Data%20Engineering%20Capstone%20Project%20-%20Certificate%20Of%20Completion.png" alt="IBM Data Engineering Professional Certificate"  />
     </a>
 </p>
+
+# Proposed Modernized Data Platform Architecture
+
+This document presents a modernized data platform architecture that leverages cloud-native, managed, and serverless services to optimize scalability, real-time processing, and ease of management. This architecture aligns with contemporary data engineering practices and suits evolving data workloads.
+
+---
+
+## Architecture Components
+
+### 1. Data Ingestion
+
+- **Real-Time Streaming**: Use **Amazon Kinesis**, **Google Pub/Sub**, or **Azure Event Hubs** to ingest real-time events (e.g., interactions, transactions). This setup enables real-time processing and supports event-driven architectures.
+- **Batch Ingestion**: Use **AWS Glue**, **Google Cloud Dataflow**, or **Azure Data Factory** for batch ETL processes and to load historical or less time-sensitive data.
+
+### 2. Databases
+
+- **Transactional Database**: Replace MySQL with a managed, serverless OLTP database like **Amazon Aurora Serverless** (PostgreSQL-compatible), **Google Cloud Spanner**, or **Azure SQL Database**. These databases offer auto-scaling, high availability, and reduced maintenance.
+- **NoSQL Database**: Use **Amazon DynamoDB**, **Google Firestore**, or **Azure Cosmos DB** for flexible, high-availability NoSQL storage, ideal for unstructured or semi-structured data.
+
+### 3. Data Lake and Data Warehouse
+
+- **Data Lake**: Implement a cloud-based data lake using **AWS S3 (with Lake Formation)**, **Google Cloud Storage**, or **Azure Data Lake Storage** for storing raw, semi-structured, and structured data.
+- **Data Warehouse**: Replace DB2 with a cloud-native data warehouse such as **Amazon Redshift**, **Google BigQuery**, or **Azure Synapse Analytics**. These services offer high-speed querying, serverless options, and integration with data lakes and ETL pipelines.
+
+### 4. ETL/ELT and Orchestration
+
+- **ETL/ELT Pipelines**: Replace Apache Airflow with cloud-native workflow orchestrators like **AWS Step Functions**, **Google Cloud Composer** (managed Airflow), or **Azure Data Factory**. These tools integrate with other cloud services to support both ETL and ELT workflows.
+- **Data Transformation**: For scalable, real-time transformations, use **dbt (data build tool)** on cloud-native platforms or managed Spark services like **AWS Glue**, **Databricks on Azure/GCP**, or **Google Cloud Dataflow**.
+
+### 5. Big Data Processing and Analytics
+
+- **Real-Time Analytics**: Use **Amazon Kinesis Analytics**, **Google BigQuery streaming API**, or **Azure Stream Analytics** for real-time data transformations and aggregations.
+- **Batch and Big Data Processing**: Use managed **Apache Spark** via **Databricks** (multi-cloud), **AWS Glue**, or **Google Cloud Dataflow** for large-scale batch processing without managing Hadoop or Spark clusters.
+
+### 6. Business Intelligence and Data Visualization
+
+- **Dashboarding and Reporting**: Replace IBM Cognos with cloud-native BI tools like **Amazon QuickSight**, **Google Data Studio (Looker)**, or **Microsoft Power BI**. These tools provide scalable, real-time dashboards and seamless data integration.
+- **Advanced Analytics**: Use managed ML services such as **AWS SageMaker**, **Google Vertex AI**, or **Azure Machine Learning** for end-to-end ML workflows, from experimentation to deployment.
+
+### 7. Machine Learning and Real-Time Recommendations
+
+- **Feature Store**: Use a managed feature store for real-time ML, such as **AWS SageMaker Feature Store** or **Databricks Feature Store**, for consistent feature access across training and production.
+- **Real-Time Recommendations**: Use **AWS Personalize**, **Google Recommendations AI**, or custom models in **AWS SageMaker**/ **Google Vertex AI** for real-time personalization and recommendations.
+
+---
+
+## Suggested Cloud-Native Tools Summary
+
+| Function                         | AWS                      | GCP                        | Azure                           |
+|----------------------------------|--------------------------|-----------------------------|---------------------------------|
+| **Ingestion**                    | Kinesis, Glue            | Pub/Sub, Dataflow          | Event Hubs, Data Factory        |
+| **OLTP Database**                | Aurora Serverless        | Cloud Spanner              | Cosmos DB                       |
+| **NoSQL Database**               | DynamoDB                 | Firestore                  | Cosmos DB                       |
+| **Data Lake**                    | S3 + Lake Formation      | Cloud Storage              | Data Lake Storage               |
+| **Data Warehouse**               | Redshift                 | BigQuery                   | Synapse Analytics               |
+| **ETL Orchestration**            | Glue, Step Functions     | Cloud Composer, Dataflow   | Data Factory                    |
+| **Batch/Big Data Processing**    | Glue, EMR, Databricks    | Dataproc, Dataflow         | HDInsight, Databricks           |
+| **Streaming Analytics**          | Kinesis Analytics        | BigQuery Streaming, Dataflow | Stream Analytics               |
+| **BI and Reporting**             | QuickSight               | Looker, Data Studio        | Power BI                        |
+| **Machine Learning**             | SageMaker, Personalize   | Vertex AI, Recommendations AI | Azure Machine Learning      |
+| **Feature Store**                | SageMaker Feature Store  | Databricks Feature Store   | Custom Databricks on Azure      |
+
+---
+
+## Benefits of the Modernized Architecture
+
+- **Fully Managed and Serverless**: Reduces infrastructure management, allowing engineers to focus on data instead of servers.
+- **Real-Time Capabilities**: Services like Kinesis, BigQuery Streaming, and Stream Analytics enable real-time data processing and analytics.
+- **Scalability**: Cloud-native services offer auto-scaling to handle various workload sizes seamlessly.
+- **Lower Latency and Improved Performance**: Real-time ETL and in-database ML inference (e.g., BigQuery ML) allow for quicker insights.
+- **Integrated Machine Learning**: Managed ML platforms support model development, deployment, and scaling within the data ecosystem.
+- **Lower Maintenance Overhead**: Serverless and managed services handle updates, patches, and scaling, reducing operational complexity and costs.
+
+---
+
+## Conclusion
+
+This modernized data platform architecture aligns with current industry best practices in data engineering. It optimizes for scalability, ease of use, and cloud-native capabilities, making it a future-ready solution for evolving data workloads and analytics requirements.
+
