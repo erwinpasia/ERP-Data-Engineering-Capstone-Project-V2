@@ -81,7 +81,7 @@ In this Capstone project, you will: "Design and build" a data platform that uses
 
 [**Module 1:**](Capstone%20Project%20Files/1_MySQL_OLTP_DB_Transactional_Data)
 - Focuses on designing and populating the MySQL OLTP database for real-time transactional processing.
-- Automates data exports to the data warehouse, using **Apache Airflow** to orchestrate scheduled exports for continuous data integration. **pache Kafka** could be used here for real-time streaming of transactional events from MySQL to downstream systems, ensuring low-latency data availability.
+- Automates data exports to the data warehouse, using **Apache Airflow** to orchestrate scheduled exports for continuous data integration. **Apache Kafka** could be used here for real-time streaming of transactional events from MySQL to downstream systems, ensuring low-latency data availability.
 
 [**Module 2:**](Capstone%20Project%20Files/2_MongoDB_NoSQL_Database_Catalog_Data)
 - Establishes the MongoDB NoSQL database for catalog data, setting up the foundation for storing product details in a scalable, flexible format.
