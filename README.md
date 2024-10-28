@@ -61,7 +61,7 @@ The capstone provides a significant addition to their professional portfolio, sh
     </a>
 </p>
 
-As part of the Capstone project, you will assume the role of an Associate Data Engineer who has recently joined an e-commerce organization. You will be presented with a business challenge that requires designing and building a "Data Platform" for a retailer data analytics. 
+As part of your Capstone project, you will take on the role of an Associate Data Engineer who has recently joined an e-commerce organization. You’ll be tasked with tackling a significant business challenge: designing and building a comprehensive "Data Platform" for retail data analytics. This project will allow you to apply your skills in data engineering to create a solution that supports informed decision-making and enhances the organization's analytical capabilities.
 
 <p style="text-align:center">
     <a href="https://www.coursera.org/learn/data-enginering-capstone-project?specialization=ibm-data-engineer" target="_blank">
@@ -69,7 +69,18 @@ As part of the Capstone project, you will assume the role of an Associate Data E
     </a>
 </p>
 
-In this Capstone project, you will: "Design and build" a data platform that uses MySQL as an OLTP database and MongoDB as a NoSQL database. "Design and build" a data warehouse and generate reports from the data. "Design and build" a reporting dashboard that reflects the key metrics of the business. Extract data from OLTP and NoSQL databases, transform it and load it into the data warehouse, and then create an ETL pipeline. And finally, create an Apache Spark connection to the data warehouse, and then deploy a Machine Learning model (SparkML). 
+### To dos:
+
+In this Capstone project, you will:
+
+- **Design and build** a robust data platform utilizing MySQL as an OLTP database and MongoDB as a NoSQL database.
+- **Create a data warehouse** that consolidates data from these sources and enables the generation of insightful reports.
+- **Develop a reporting dashboard** to visualize key business metrics and facilitate data-driven decision-making.
+- **Extract, transform, and load (ETL)** data from both the OLTP and NoSQL databases into the data warehouse, creating an efficient ETL pipeline.
+- **Establish an Apache Spark connection** to the data warehouse, and deploy a machine learning model using SparkML to uncover patterns and drive further insights.
+
+This project will provide you with hands-on experience in data engineering, analytics, and machine learning within an e-commerce context.
+ 
 
 <p style="text-align:center">
     <a href="https://www.coursera.org/learn/data-enginering-capstone-project?specialization=ibm-data-engineer" target="_blank">
@@ -77,7 +88,7 @@ In this Capstone project, you will: "Design and build" a data platform that uses
     </a>
 </p>
 
-## Module Breakdown:
+### Module Breakdown:
 
 [**Module 1:**](Capstone%20Project%20Files/1_MySQL_OLTP_DB_Transactional_Data)
 - Focuses on designing and populating the MySQL OLTP database for real-time transactional processing.
