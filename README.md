@@ -77,27 +77,15 @@ In this Capstone project, you will: "Design and build" a data platform that uses
     </a>
 </p>
 
-1. In [Module_1](Capstone%20Project%20Files/1_MySQL_OLTP_DB_Transactional_Data), you will design the OLTP database for an E-Commerce website, populate the OLTP Database with the data provided and automate the export of the daily incremental data into the data warehouse. 
-
-2. In [Module_2](Capstone%20Project%20Files/2_MongoDB_NoSQL_Database_Catalog_Data), you will set up a NoSQL database to store the catalog data for an E-Commerce website, load the E-Commerce catalog data into the NoSQL database, and query the E-Commerce catalog data in the NoSQL database. 
-
-3. In [Module_3-a](Capstone%20Project%20Files/3-a%20_PostgreSQL_Staging_Data_Warehouse), you will design the schema for a data warehouse based on the schema of the OLTP and NoSQL databases. While on [Module_3-b](Capstone%20Project%20Files/3-b_Db2_Production_Data_Warehouse), you’ll then create the schema and load the data into fact and dimension tables, automate the daily incremental data insertion into the data warehouse, and create Cubes and Rollups to make the reporting easier. 
-
-4. In [Module_4](Capstone%20Project%20Files/4_Cognos_Analytics_Business_Intelligence), you will create a Cognos (Business Intelligence Analytics) data source that points to a data warehouse table, create a bar chart of Quarterly sales of cell phones, create a pie chart of sales of electronic goods by category, and create a line chart of total sales per month for the year 2020. 
-
-5. In [Module_5](Capstone%20Project%20Files/5_ETL_and_Data_Pipelines), you will extract data from OLTP, NoSQL, and MongoDB databases into CSV format. You will then transform the OLTP data to suit the data warehouse schema and then load the transformed data into the data warehouse. Finally, you will verify that the data is loaded properly. 
-
-6. In [Module_6](Capstone%20Project%20Files/6_Spark_BigData_Cluster), you will use your skills in Big Data Analytics to create a Spark connection to the data warehouse, and then deploy a machine learning model on SparkML for making sales projections.
-
 ## Module Breakdown:
 
 [**Module 1:**](Capstone%20Project%20Files/1_MySQL_OLTP_DB_Transactional_Data)
 - Focuses on designing and populating the MySQL OLTP database for real-time transactional processing.
-- Automates data exports to the data warehouse, using Apache Airflow to orchestrate scheduled exports for continuous data integration. Apache Kafka could be used here for real-time streaming of transactional events from MySQL to downstream systems, ensuring low-latency data availability.
+- Automates data exports to the data warehouse, using **Apache Airflow** to orchestrate scheduled exports for continuous data integration. **pache Kafka** could be used here for real-time streaming of transactional events from MySQL to downstream systems, ensuring low-latency data availability.
 
 [**Module 2:**](Capstone%20Project%20Files/2_MongoDB_NoSQL_Database_Catalog_Data)
 - Establishes the MongoDB NoSQL database for catalog data, setting up the foundation for storing product details in a scalable, flexible format.
-- This module emphasizes managing and querying unstructured catalog data, with Apache Kafka optionally streaming catalog changes (e.g., updates to product data) from MongoDB to the data warehouse in real time.
+- This module emphasizes managing and querying unstructured catalog data, with **Apache Kafka** optionally streaming catalog changes (e.g., updates to product data) from MongoDB to the data warehouse in real time.
 
 **Module 3:** Divided into two parts:
 
@@ -106,21 +94,19 @@ In this Capstone project, you will: "Design and build" a data platform that uses
 
 - [**Module 3-b:**](Capstone%20Project%20Files/3-b_Db2_Production_Data_Warehouse)
     - Implements the data warehouse schema by creating fact and dimension tables
-    - Sets up automated data ingestion, with Apache Airflow managing ETL processes and scheduling daily batch loads into the data warehouse. Kafka could stream real-time incremental data from the OLTP and NoSQL databases, enabling near real-time data warehousing.
+    - Sets up automated data ingestion, with **Apache Airflow** managing ETL processes and scheduling daily batch loads into the data warehouse. Create Cubes and Rollups to make the reporting easier. **Kafka** could stream real-time incremental data from the OLTP and NoSQL databases, enabling near real-time data warehousing.
 
 [**Module 4:**](Capstone%20Project%20Files/4_Cognos_Analytics_Business_Intelligence)
 - Involves creating a business intelligence data source in Cognos, setting up charts and reports for sales metrics.
-- This module focuses on visual analytics and historical data interpretation for 2020, leveraging the data in the warehouse ingested through Airflow and, potentially, real-time insights from Kafka streams.
+- This module focuses on visual analytics and historical data interpretation for 2020, leveraging the data in the warehouse ingested through **Airflow** and, potentially, real-time insights from **Kafka** streams.
 
 [**Module 5:**](Capstone%20Project%20Files/5_ETL_and_Data_Pipelines)
-- Builds an ETL pipeline using Apache Airflow to pull data from MySQL, MongoDB, and OLTP databases, transforming it to fit the data warehouse schema.
-- Kafka can support real-time or near real-time data extraction from source systems, continuously streaming data to ensure minimal lag in data availability for ETL.
+- Builds an ETL pipeline using **Apache Airflow** to pull data from MySQL, MongoDB, and OLTP databases, transforming it to fit the data warehouse schema.
+- **Kafka** can support real-time or near real-time data extraction from source systems, continuously streaming data to ensure minimal lag in data availability for ETL.
 
 [**Module 6:**](Capstone%20Project%20Files/6_Spark_BigData_Cluster)
 - Applies Spark’s machine learning library (SparkML) to build a model for sales projections, leveraging Big Data analytics to derive insights and support decision-making.
-- Kafka could be used to stream new data or results back into the data pipeline for automated feedback or to populate dashboards with live ML-driven insights.
-
-
+- **Kafka** could be used to stream new data or results back into the data pipeline for automated feedback or to populate dashboards with live ML-driven insights.
 
 ## [Certificate of Competency:](https://www.coursera.org/account/accomplishments/verify/LAWSR5DZFP5D)
 
