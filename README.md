@@ -116,164 +116,81 @@ In this Capstone project, you will: "Design and build" a data platform that uses
     </a>
 </p>
 
-# Modernize Version of the Data Platform Architecture
+# Alternative Cloud-Native Data Platform Architecture
 
-This possible alternative project provides a cloud-native, modern data platform architecture for an e-commerce business, shifting from traditional on-premise and self-managed systems to fully managed, scalable, and serverless cloud services. This design leverages Snowflake, Databricks, and real-time processing technologies to align with current data engineering best practices.
+This architecture can be improved to align with **today's modern, cloud-native data engineering stack**. Modern data platforms benefit from managed, serverless, and scalable services that simplify management, improve efficiency, and reduce costs. Here’s an alternative design using cloud-native services, focusing on real-time data processing and advanced analytics.
 
-## Project Overview
+## 1. Core Architecture Overview
+- Shift to a cloud provider like AWS, Azure, or GCP, leveraging their managed and serverless services for scalable, cost-effective data handling.
+- Replace traditional databases and on-premises ETL tools with cloud-native options to enable real-time streaming, automated scaling, and enhanced analytics.
 
-In this capstone project, you will:
-- Design and build a cloud-native data platform using **Snowflake** as the data warehouse and **Databricks** for processing and machine learning.
-- Set up real-time data ingestion pipelines using **Apache Kafka** or **AWS Kinesis**.
-- Build a data lake on **AWS S3** for raw data storage and historical data analysis.
-- Implement a serverless ETL pipeline with **AWS Glue** for batch processing.
-- Deploy a BI and reporting dashboard using **Looker** for data visualization.
-- Deploy a predictive model using **Databricks MLflow**.
+## 2. Recommended Architecture Components
 
----
+- **OLTP Database (Transactional Layer)**:
+  - Use **AWS RDS Aurora Serverless (MySQL)** or **Azure Cosmos DB** for transactional data that scales automatically based on load, simplifying database management while ensuring high availability.
 
-## Architecture Diagram
+- **NoSQL Database (Catalog Data)**:
+  - Use **AWS DynamoDB** or **Google Firestore**, both serverless NoSQL databases, for catalog and product metadata. These solutions are fully managed and can handle high volumes of catalog data with low latency.
 
-```plaintext
-                      +-------------------------+
-                      |   Customers from the    |
-                      |       (Internet)        |
-                      +------------+------------+
-                                   |
-                                   |
-                             +-----v-----+
-                             | Web Server |
-                             +-----+-----+
-                                   |
-                       +-----------v-------------+
-                       | Real-Time Data Streaming|
-                       |   (Kafka / AWS Kinesis) |
-                       +-----------+-------------+
-                                   |
-                                   |
-                           +-------v-------+
-                           |               |
-                  +--------> AWS S3 Data   +--------+
-                  |        | Lake (Raw)    |        |
-        +---------v+       |               |      +-v---------+
-        | Snowflake|       +-------+-------+      | Databricks |
-        | Data     |               |              | (ML/ETL)   |
-        | Warehouse|               |              +----+-------+
-        +----+-----+               |                   |
-             |                     |                   |
-       +-----v----+                |             +-----v-----+
-       | Looker BI|                |             | Databricks|
-       | Dashboard|                |             | MLflow    |
-       +----------+                |             | for Model |
-                                    \            | Deployment|
-                                     \           +-----------+
-                                      \
-                                       +------------------+
-                                       | Serverless ETL   |
-                                       |   (AWS Glue)     |
-                                       +------------------+
+- **Staging Layer (Real-Time Stream Processing)**:
+  - Replace PostgreSQL with **AWS Kinesis** or **Azure Event Hubs** for real-time data streaming.
+  - Use **Databricks** for real-time ETL transformations, integrating with the streaming service to clean and prepare data before it lands in the data warehouse.
 
-```
+- **Data Warehouse**:
+  - **Snowflake** as the data warehouse provides a serverless, high-performing, and highly scalable solution, offering separate compute and storage that scales according to demand.
+  - Snowflake's integration with semi-structured data types (JSON, Avro, Parquet) also eliminates the need for separate staging databases, allowing direct ingestion and transformation.
 
-# Modern Data Architecture
+- **Data Lake Storage**:
+  - For raw data storage and archival, use **AWS S3** or **Azure Data Lake Storage**. These storage solutions integrate well with Snowflake and Databricks, enabling a "lakehouse" architecture where both structured and unstructured data can be processed.
 
-This version provides an overview of a modern data architecture designed for scalability, real-time data processing, and efficient data storage and retrieval. This architecture integrates various cloud services to support data engineering, data analytics, and machine learning workflows.
+- **Big Data Platform and Machine Learning**:
+  - **Databricks** (on any cloud provider) for big data processing, analytics, and machine learning. The Databricks Unified Data Analytics Platform integrates with Spark, providing a scalable and interactive environment for developing ML models with support for real-time and batch data.
+  - Use **Databricks MLflow** or **AWS SageMaker** for model development, versioning, and deployment.
 
-## Components
+- **Data Orchestration**:
+  - **Apache Airflow** or Managed Airflow on GCP/AWS/Azure for orchestrating workflows.
+  - Alternatively, use **AWS Step Functions** or **Azure Data Factory** for serverless and fully managed orchestration, which seamlessly integrates with other cloud services.
 
-### 1. Data Lake (AWS S3)
-- **Purpose:** Centralized raw data storage for both structured and unstructured data.
-- **Role:** Serves as the main data lake where all raw and semi-processed data are stored for historical analysis or further processing.
-- **Benefits:** Cost-effective, scalable, and directly integrable with other AWS services.
+- **Business Intelligence**:
+  - **Tableau** or **Looker** for visualizations and dashboards, integrating with Snowflake or Databricks SQL to deliver insights in real-time.
+  - **Power BI** on Azure or **Google Data Studio** on GCP as alternatives, providing interactive dashboards directly connected to cloud data warehouses.
 
-### 2. Real-Time Data Streaming (Kafka / AWS Kinesis)
-- **Purpose:** Ingests data in real-time from the web server and other sources, feeding directly into S3, Snowflake, or Databricks.
-- **Role:** Provides low-latency data ingestion, suitable for applications requiring real-time analytics.
-- **Benefits:** Allows for near-instantaneous data ingestion, ideal for tracking transactions, user behavior, and website metrics.
+## 3. Detailed Module-by-Module Modern Approach
 
-### 3. Data Warehouse (Snowflake)
-- **Purpose:** Centralized data repository for structured and transformed data, supporting analytical workloads.
-- **Role:** Stores processed data in a structured format, optimized for high-performance queries and BI reporting.
-- **Benefits:** Serverless, fully managed, and highly scalable with advanced capabilities like time travel and zero-copy cloning.
+- **Module 1: Transactional Database Design and Real-Time Ingestion**
+  - Use **AWS Aurora Serverless** for transactional data and **AWS Kinesis Data Streams** to capture changes in real-time.
+  - Implement Change Data Capture (CDC) with **AWS DMS (Database Migration Service)** to transfer data continuously to Kinesis or the data lake.
 
-### 4. ETL Processing (AWS Glue)
-- **Purpose:** Serverless ETL pipeline for data transformation from raw S3 storage into Snowflake.
-- **Role:** Runs scheduled batch jobs to transform and load data from the data lake (S3) into the data warehouse (Snowflake).
-- **Benefits:** Fully managed, auto-scaling, and integrates seamlessly with other AWS services.
+- **Module 2: NoSQL Catalog Database Setup**
+  - Set up **AWS DynamoDB** or **Azure Cosmos DB** for catalog data, with data sync enabled to update the data lake in near real-time.
+  - Use **Kinesis Data Firehose** or **Azure Stream Analytics** to move the data to S3 or Azure Data Lake Storage, creating a unified source of truth.
 
-### 5. Big Data Processing & Machine Learning (Databricks)
-- **Purpose:** Data processing and machine learning pipeline built on Apache Spark.
-- **Role:** Processes data, executes machine learning workflows, and integrates with Snowflake for complex analytical queries.
-- **Benefits:** Collaborative environment for data scientists and data engineers, with managed MLflow for model versioning, tracking, and deployment.
+- **Module 3: Data Warehouse and Lakehouse Schema Design**
+  - Ingest raw and structured data into **AWS S3** or **Azure Data Lake**.
+  - Use **Databricks Delta Lake** to establish a lakehouse model that acts as both data storage and a source for the data warehouse, minimizing the need for staging databases.
+  - Store transformed data in **Snowflake** for efficient, scalable analytics.
 
-### 6. Business Intelligence (Looker)
-- **Purpose:** Data visualization and BI reporting tool.
-- **Role:** Connects to Snowflake to create dashboards and reports, enabling interactive data exploration and insights generation.
-- **Benefits:** Supports self-service analytics, with customizable dashboards and reports.
+- **Module 4: Real-Time and Historical Business Intelligence**
+  - Use **Tableau** or **Power BI** to directly connect to Snowflake for real-time data visualization.
+  - Set up **Databricks SQL** for advanced analytics queries and to power interactive dashboards with more complex insights.
 
-### 7. Real-Time Model Deployment (Databricks MLflow)
-- **Purpose:** Enables model deployment and monitoring.
-- **Role:** Deploys predictive models trained on Databricks into a production environment, allowing for real-time predictions.
-- **Benefits:** Integrates with Databricks for end-to-end model lifecycle management, including tracking and monitoring.
+- **Module 5: ETL and Real-Time Data Pipeline**
+  - Set up **Apache Airflow** to orchestrate ETL jobs, including real-time streaming data transformations.
+  - Use **Databricks** for data cleansing and transformation in real-time, and store intermediate data in Delta Lake for easy access by Snowflake.
+  - Use **AWS Glue** or **Azure Synapse** to further automate data cataloging and ETL.
 
-## Tools and Technologies
+- **Module 6: Machine Learning Model Deployment**
+  - Use **Databricks MLflow** for model management, tracking, and deployment.
+  - Deploy models in Databricks or use **Snowflake’s Snowpark** for model inference within the data warehouse, allowing BI tools to access real-time predictions.
 
-| Tool             | Purpose                           | Service Type               |
-|------------------|-----------------------------------|-----------------------------|
-| AWS S3           | Data lake for raw and historical data | Cloud Storage        |
-| Kafka / Kinesis  | Real-time data ingestion           | Streaming Service           |
-| Snowflake        | Data warehousing and analytics     | Cloud Data Warehouse        |
-| AWS Glue         | Serverless ETL pipeline           | Data Processing             |
-| Databricks       | Big data processing and ML        | Data Processing             |
-| Looker           | BI and Data Visualization         | BI/Visualization            |
-| MLflow           | Model deployment and monitoring   | ML Lifecycle                |
+## 4. Benefits of the Modernized Architecture
 
-## Module Breakdown
+- **Scalability**: Cloud-native services like Snowflake, Databricks, and DynamoDB automatically scale with demand, reducing the need for manual infrastructure management.
+- **Cost-Efficiency**: Serverless services minimize costs by only charging for usage, making it economical, especially for intermittent workloads.
+- **Real-Time Capabilities**: Stream processing with Kinesis, Event Hubs, or Delta Lake ensures data is processed in real-time, enabling up-to-the-minute analytics.
+- **Simplified Management**: Managed services, including Airflow, Glue, and DMS, handle maintenance tasks like backups and upgrades, reducing operational overhead.
+- **Unified Data Lakehouse Approach**: Combining data lake and warehouse functionalities with Snowflake and Delta Lake enables flexible data storage for both raw and processed data, improving accessibility and reducing duplication.
+- **Seamless Integration**: Each component integrates well with others in the cloud ecosystem, simplifying data movement and orchestration.
 
-### Module 1
-- Set up **AWS S3** as the data lake.
-- Configure **Kafka** or **AWS Kinesis** for real-time streaming.
-
-### Module 2
-- Design and implement the **Snowflake data warehouse**, defining schema and tables.
-- Set up Snowflake **Streams** and **Tasks** for near-real-time data updates.
-
-### Module 3
-- Configure **AWS Glue** to perform ETL jobs, transforming data from S3 and loading it into Snowflake.
-
-### Module 4
-- Set up **Looker** and create interactive dashboards for business metrics, sales trends, and product analytics.
-- Use Looker’s modeling layer to build derived metrics and dimensions from Snowflake.
-
-### Module 5
-- Use **Databricks** for data processing and analytics.
-- Process data from S3 and Snowflake, transforming it to generate feature sets for machine learning models.
-
-### Module 6
-- Build and deploy a machine learning model using **Databricks MLflow** for sales forecasting and customer segmentation.
-- Integrate MLflow for model tracking, versioning, and monitoring in production.
-
-## Benefits of the Modernized Architecture
-
-- **Scalability:** The architecture leverages cloud-native solutions (Snowflake, Databricks, AWS services) that scale automatically based on demand.
-- **Real-Time Capabilities:** Real-time data ingestion via Kafka/Kinesis, coupled with Snowflake’s streaming capabilities, enables timely data insights.
-- **Serverless Operations:** Serverless components (AWS Glue, S3, Snowflake) reduce infrastructure management, allowing the team to focus on data and insights rather than maintenance.
-- **Enhanced Collaboration:** Databricks provides a collaborative platform for data scientists and engineers to work seamlessly on data processing, analytics, and machine learning.
-- **Cost Efficiency:** Managed services and serverless operations optimize resource usage, ensuring cost-effective processing and storage.
-
-## Getting Started
-
-### Prerequisites
-- AWS Account with permissions to access S3, Glue, and Kinesis.
-- Snowflake account set up with access to create warehouses and schemas.
-- Databricks workspace on AWS.
-- Looker instance for BI visualization.
-
-### Setup Steps
-1. Configure **AWS S3** as the data lake.
-2. Set up **Kafka** or **Kinesis** for real-time data streaming.
-3. Deploy **Snowflake data warehouse** and connect it to S3 and Databricks.
-4. Configure **AWS Glue** for ETL operations.
-5. Create dashboards and reports in **Looker**.
-6. Use **Databricks MLflow** for deploying ML models.
+This modern architecture not only provides flexibility and scalability but also significantly improves real-time analytics capabilities, streamlines data processing, and supports advanced ML use cases with reduced infrastructure management.
 
