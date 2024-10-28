@@ -92,33 +92,33 @@ In this Capstone project, you will: "Design and build" a data platform that uses
 ## Module Breakdown:
 
 [**Module 1:**](Capstone%20Project%20Files/1_MySQL_OLTP_DB_Transactional_Data)
-    - Focuses on designing and populating the MySQL OLTP database for real-time transactional processing.
-    - Automates data exports to the data warehouse, using Apache Airflow to orchestrate scheduled exports for continuous data integration. Apache Kafka could be used here for real-time streaming of transactional events from MySQL to downstream systems, ensuring low-latency data availability.
+- Focuses on designing and populating the MySQL OLTP database for real-time transactional processing.
+- Automates data exports to the data warehouse, using Apache Airflow to orchestrate scheduled exports for continuous data integration. Apache Kafka could be used here for real-time streaming of transactional events from MySQL to downstream systems, ensuring low-latency data availability.
 
 [**Module 2:**](Capstone%20Project%20Files/2_MongoDB_NoSQL_Database_Catalog_Data)
-    - Establishes the MongoDB NoSQL database for catalog data, setting up the foundation for storing product details in a scalable, flexible format.
-    - This module emphasizes managing and querying unstructured catalog data, with Apache Kafka optionally streaming catalog changes (e.g., updates to product data) from MongoDB to the data warehouse in real time.
+- Establishes the MongoDB NoSQL database for catalog data, setting up the foundation for storing product details in a scalable, flexible format.
+- This module emphasizes managing and querying unstructured catalog data, with Apache Kafka optionally streaming catalog changes (e.g., updates to product data) from MongoDB to the data warehouse in real time.
 
 **Module 3:** Divided into two parts:
 
-    - [**Module 3-a:**](Capstone%20Project%20Files/3-a%20_PostgreSQL_Staging_Data_Warehouse)
-        - Schema design for the data warehouse, integrating OLTP and NoSQL schemas. This design step considers both relational and non-relational data structures for efficient reporting.
+- [**Module 3-a:**](Capstone%20Project%20Files/3-a%20_PostgreSQL_Staging_Data_Warehouse)
+    - Schema design for the data warehouse, integrating OLTP and NoSQL schemas. This design step considers both relational and non-relational data structures for efficient reporting.
 
-    - [**Module 3-b:**](Capstone%20Project%20Files/3-b_Db2_Production_Data_Warehouse)
-        - Implements the data warehouse schema by creating fact and dimension tables.
-        - Sets up automated data ingestion, with Apache Airflow managing ETL processes and scheduling daily batch loads into the data warehouse. Kafka could stream real-time incremental data from the OLTP and NoSQL databases, enabling near real-time data warehousing.
+- [**Module 3-b:**](Capstone%20Project%20Files/3-b_Db2_Production_Data_Warehouse)
+    - Implements the data warehouse schema by creating fact and dimension tables
+    - Sets up automated data ingestion, with Apache Airflow managing ETL processes and scheduling daily batch loads into the data warehouse. Kafka could stream real-time incremental data from the OLTP and NoSQL databases, enabling near real-time data warehousing.
 
 [**Module 4:**](Capstone%20Project%20Files/4_Cognos_Analytics_Business_Intelligence)
-    - Involves creating a business intelligence data source in Cognos, setting up charts and reports for sales metrics.
-    - This module focuses on visual analytics and historical data interpretation for 2020, leveraging the data in the warehouse ingested through Airflow and, potentially, real-time insights from Kafka streams.
+- Involves creating a business intelligence data source in Cognos, setting up charts and reports for sales metrics.
+- This module focuses on visual analytics and historical data interpretation for 2020, leveraging the data in the warehouse ingested through Airflow and, potentially, real-time insights from Kafka streams.
 
 [**Module 5:**](Capstone%20Project%20Files/5_ETL_and_Data_Pipelines)
-    - Builds an ETL pipeline using Apache Airflow to pull data from MySQL, MongoDB, and OLTP databases, transforming it to fit the data warehouse schema.
-    - Kafka can support real-time or near real-time data extraction from source systems, continuously streaming data to ensure minimal lag in data availability for ETL.
+- Builds an ETL pipeline using Apache Airflow to pull data from MySQL, MongoDB, and OLTP databases, transforming it to fit the data warehouse schema.
+- Kafka can support real-time or near real-time data extraction from source systems, continuously streaming data to ensure minimal lag in data availability for ETL.
 
 [**Module 6:**](Capstone%20Project%20Files/6_Spark_BigData_Cluster)
-    - Applies Spark’s machine learning library (SparkML) to build a model for sales projections, leveraging Big Data analytics to derive insights and support decision-making.
-    - Kafka could be used to stream new data or results back into the data pipeline for automated feedback or to populate dashboards with live ML-driven insights.
+- Applies Spark’s machine learning library (SparkML) to build a model for sales projections, leveraging Big Data analytics to derive insights and support decision-making.
+- Kafka could be used to stream new data or results back into the data pipeline for automated feedback or to populate dashboards with live ML-driven insights.
 
 
 
