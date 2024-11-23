@@ -127,7 +127,7 @@ This project will provide you with hands-on experience in data engineering, anal
     </a>
 </p>
 
-# Alternative "Cloud-Native Data Platform Architecture" *(Update: 20241108)*
+# [Alternative "Cloud-Native Data Platform Architecture"](cloud_native_dpa) *(Update: 20241108)*
 
 This architecture can be improved to align with **today's modern, cloud-native data engineering stack**. Modern data platforms benefit from managed, serverless, and scalable services that simplify management, improve efficiency, and reduce costs. Here’s an alternative design using cloud-native services, focusing on real-time data processing and advanced analytics.
 
